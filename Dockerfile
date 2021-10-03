@@ -15,7 +15,7 @@ RUN npm run build
 # Stage2 : Serve app with aginx server
 
 # Use official nginx image as bas image
-FROM nginx:latest
+FROM docker2021repos/nginx:latest
 
 # Copy the build output to replace the default nginx content
 COPY --from=build /app/dist/organic-client /usr/share/nginx/html
